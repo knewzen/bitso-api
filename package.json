@@ -1,5 +1,5 @@
 {
-  "name": "bitso-api",
+  "name": "bitso-node",
   "version": "1.0.0",
   "description": "Wraper for bitso.com api in Node.js",
   "main": "index.js",
