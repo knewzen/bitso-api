@@ -1,0 +1,16 @@
+{
+  "name": "bitso-api",
+  "version": "1.0.0",
+  "description": "Wraper for bitso.com in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adolfo Reyna-Orta",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "crypto": "^1.0.1",
+    "qs": "^6.5.0"
+  }
+}
