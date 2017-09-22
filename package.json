@@ -1,8 +1,8 @@
 {
   "name": "bitso-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wraper for bitso.com api in Node.js",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

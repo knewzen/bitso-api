@@ -1,9 +1,6 @@
 const axios = require('axios');
 var qs =  require('qs');
 
-const uri = (path, params) =>
-  `${path}?${qs.stringify(params)}`;
-
 module.exports = {
   api: process.env.bitsoApi || "",
   secret: process.env.bitsoSecret || "",
