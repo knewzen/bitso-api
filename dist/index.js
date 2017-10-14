@@ -6,7 +6,7 @@ module.exports = {
   secret: process.env.bitsoSecret || "",
   baseUrl: "https://api.bitso.com/v3/",
   requestPublic: function(endpoint, params = {}){
-    console.log(params)
+    //console.log(params)
     return axios.get(`${this.baseUrl}${endpoint}`, {params})
       .then(({data})=>data)
       .catch((err)=>console.log(err));
@@ -22,6 +22,9 @@ module.exports = {
   },
   trades: function(params = {book:'btc_mxn'}){
     return this.requestPublic('trades/', params);
+  },
+  ticker: function(params = {book:'btc_mxn'}){
+    return this.requestPublic('ticker/', params);
   },
 
   requestPrivate: function(endpoint, params, method){
@@ -44,7 +47,7 @@ module.exports = {
       method === `get` ?
         [config] :
         [json_payload, config];
-    console.log(`${this.baseUrl}${endpoint}?` + qs.stringify(params), ...args);
+    //console.log(`${this.baseUrl}${endpoint}?` + qs.stringify(params), ...args);
     return axios[method](`${this.baseUrl}${endpoint}?` + qs.stringify(params), ...args)
       .then(({data})=>data)
       .catch((err)=>console.log(err.response.data));
