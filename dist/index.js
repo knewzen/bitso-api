@@ -44,10 +44,10 @@ module.exports = {
       method === `get` ?
         [config] :
         [json_payload, config];
-
+    console.log(`${this.baseUrl}${endpoint}?` + qs.stringify(params), ...args);
     return axios[method](`${this.baseUrl}${endpoint}?` + qs.stringify(params), ...args)
       .then(({data})=>data)
-      .catch((err)=>console.log(err));
+      .catch((err)=>console.log(err.response.data));
   },
   account_status: function(params = {}){
     return this.requestPrivate('account_status/', false, 'get')
@@ -70,7 +70,7 @@ module.exports = {
   user_trades: function(params = {limit:100}){
     return this.requestPrivate('user_trades/', params, 'get');
   },
-  open_orders: function(params = {}){
+  open_orders: function(params = {book: 'btc_mxn'}){
     return this.requestPrivate('open_orders/', params, 'get');
   },
   funding_destination: function(params = {fund_currency: 'eth'}){
