@@ -70,6 +70,9 @@ module.exports = {
   user_trades: function(params = {limit:100}){
     return this.requestPrivate('user_trades/', params, 'get');
   },
+  open_orders: function(params = {}){
+    return this.requestPrivate('open_orders/', params, 'get');
+  },
   funding_destination: function(params = {fund_currency: 'eth'}){
     return this.requestPrivate('funding_destination/', params, 'get');
   },
