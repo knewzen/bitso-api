@@ -9,4 +9,6 @@ Bitso API wrapper for Node.js
 node i -s bitso-node
 ```
 
-## Still working on documentation.
+## Official Documentation
+
+[https://bitso.com/api_info](https://bitso.com/api_info)
