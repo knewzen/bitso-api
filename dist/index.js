@@ -97,7 +97,7 @@ module.exports = {
   fundings: function(params = {limit:100}, credentials={}){
     return this.requestPrivate('fundings/', params, 'get', credentials);
   },
-  user_trades: function(params = {limit:100}, credentials={}){
+  user_trades: function(params = {limit:100, book: 'btc_mxn'}, credentials={}){
     return this.requestPrivate('user_trades/', params, 'get', credentials);
   },
   open_orders: function(params = {book: 'btc_mxn'}, credentials={}){

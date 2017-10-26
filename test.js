@@ -18,11 +18,11 @@ bitso.mx_bank_codes().then((data)=>console.log(data));*/
 
 console.log("withdrawals");
 bitso.withdrawals().then((data)=>{
-  console.log("withdrawals", data);
+  console.log("withdrawals", data.payload);
 }).catch(console.log);
 console.log("fundings");
 bitso.fundings().then((data)=>{
-  console.log("fundings", data);
+  console.log("fundings", data.payload);
 }).catch(console.log);
 console.log("balance");
 bitso.balance().then((data)=>{
