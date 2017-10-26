@@ -1,6 +1,6 @@
 # bitso-node
 
-Bitso API wrapper for Node.js
+Bitso REST API wrapper for Node.js
 
 
 ## Installation
