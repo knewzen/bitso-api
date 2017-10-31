@@ -32,3 +32,7 @@ console.log("open_orders");
 bitso.open_orders().then((data)=>{
   console.log("open_orders", data);
 }).catch(console.log);
+console.log("user_trades");
+bitso.user_trades({book:"eth_mxn"}).then((data)=>{
+  console.log("user_trades", data);
+}).catch(console.log);
