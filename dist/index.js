@@ -70,8 +70,10 @@ module.exports = {
             resolve(data)
           })
           .catch((err)=>{
+            usersRequests[apiKey].pop();
+            if(usersRequests[apiKey].length) usersRequests[apiKey][usersRequests[apiKey].length-1]();
+            console.error(err.response.data);
             refuse(err)
-            console.log(err.response.data);
           });
       });
       if(usersRequests[apiKey].length == 1){
